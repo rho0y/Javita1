@@ -2,25 +2,16 @@ import javax.swing.*;
 
 public class Proveedor {
     /**Declaracion de atributos*/
-    String RUC;
-    String razonSocial;
-    String direccion;
+    private String RUC;
+    private String razonSocial;
+    private String direccion;
+    private String Phono;
+    private float pesoProductos;
 
     public Proveedor() {
+
     }
 
-    public Proveedor(String razonSocial, String RUC) {
-        this.razonSocial = razonSocial;
-        this.RUC = RUC;
-    }
-
-    public Proveedor(String RUC, String razonSocial, String direccion) {
-        this.RUC = RUC;
-        this.razonSocial = razonSocial;
-        this.direccion = direccion;
-    }
-
-    /**Metods propios de JAVA*/
     public String getRUC() {
         return RUC;
     }
@@ -45,20 +36,42 @@ public class Proveedor {
         this.direccion = direccion;
     }
 
-    /**Metodos del programador*/
-    public String detalleProveedor(String ruc, String rs, String dir){
-        String detcon;
-        detcon= "El RUC del proveedor es: " +ruc + "\n"+
-                "Razon Social: " +rs + "\n"+
-                "Direccion: " +dir ;
-        return detcon;
+    public String getPhono() {
+        return Phono;
     }
-    public String imprimirDatos(String RUC){
+
+    public void setPhono(String phono) {
+        Phono = phono;
+    }
+
+    public float getPesoProductos() {
+        return pesoProductos;
+    }
+
+    public void setPesoProductos(float pesoProductos) {
+        this.pesoProductos = pesoProductos;
+    }
+
+    /**Creacion de Metodos de JAVA*/
+
+
+    public void detalle(){
+        JOptionPane.showMessageDialog(null, "El proovedor del RUC es: " +this.RUC);
+    }
+    public void detalle2(){
+        System.out.println();
+        System.out.println("RUC Proveedor : " +this.RUC);
+        System.out.println();
+        System.out.println("RUC Proveedor: " +this.getRUC());
+    }
+
+    /*public String imprimirDatos(String RUC){
         String pass1;
         JOptionPane.showMessageDialog(null,"El RUC es\n"+RUC);
         pass1=RUC+"SRI";
 
         return pass1;
-    }
+    }*/
+
 
 }
